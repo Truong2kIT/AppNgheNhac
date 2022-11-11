@@ -1,6 +1,5 @@
 package com.truongpv.nghenhac;
 
-public interface OnClickLisetenner {
+public interface OnClickListener {
     void clickItem(Song song);
-
 }

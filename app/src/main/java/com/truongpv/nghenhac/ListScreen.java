@@ -30,7 +30,7 @@ public class ListScreen extends AppCompatActivity implements OnClickListener{
         mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img4,R.drawable.isaac));
         mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img5,R.drawable.phiasau));
         mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img1,R.drawable.phiasau));
-        adt = new CustomSong(mSongs,this);
+        adt = new CustomSong(mSongs, (View.OnClickListener) this);
         rcv.setHasFixedSize(true);
         rcv.setAdapter(adt);
         rcv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));

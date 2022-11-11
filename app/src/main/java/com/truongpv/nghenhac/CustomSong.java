@@ -62,7 +62,7 @@ public class CustomSong extends RecyclerView.Adapter<CustomSong.ViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listener.clickItem(asong);
+                    listener.onClick(asong);
                 }
             });
         }
