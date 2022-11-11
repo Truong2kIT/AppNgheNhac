@@ -62,7 +62,7 @@ public class MainActivity1 extends AppCompatActivity {
         imgXoay.startAnimation(lacnhac);
 
         mSongs =new ArrayList<>();
-        song = new Song("Đen Đá Không Đường ", "Amee ", R.drawable.anh1, R.drawable.tinh_yeu_cao_thuong);
+        song = new Song("Đen Đá Không Đường ", "Amee ", R.drawable.anh1, R.raw.tinh_yeu_cao_thuong);
         mSongs.add(song);
 
         if (song != null) {

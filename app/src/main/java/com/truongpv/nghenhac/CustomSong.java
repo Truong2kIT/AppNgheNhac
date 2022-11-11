@@ -12,11 +12,9 @@ import java.util.List;
 
 public class CustomSong extends RecyclerView.Adapter<CustomSong.ViewHolder> {
     List<Song> mSongs;
-    View.OnClickListener listener;
-    private ViewHolder holder;
-    private int position;
+    OnClickListener listener;
 
-    public CustomSong(List<Song> mSongs, View.OnClickListener listener) {
+    public CustomSong(List<Song> mSongs, OnClickListener listener) {
         this.mSongs = mSongs;
         this.listener = listener;
     }
@@ -26,13 +24,6 @@ public class CustomSong extends RecyclerView.Adapter<CustomSong.ViewHolder> {
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_song,parent,false);
         return new ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull CustomSong.ViewHolder holder, int position) {
-
-        this.holder = holder;
-        this.position = position;
     }
 
     @Override
@@ -62,7 +53,7 @@ public class CustomSong extends RecyclerView.Adapter<CustomSong.ViewHolder> {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    listener.onClick(asong);
+                    listener.clickItem(asong);
                 }
             });
         }

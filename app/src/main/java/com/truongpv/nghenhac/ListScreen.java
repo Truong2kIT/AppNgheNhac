@@ -24,13 +24,13 @@ public class ListScreen extends AppCompatActivity implements OnClickListener{
         rcv = findViewById(R.id.rcv);
         mSongs = new ArrayList<Song>();
 
-        mSongs.add(new Song("Love yourseft","Justin Biber",R.drawable.home_img1,R.drawable.phiasau));
-        mSongs.add(new Song("Anything","Issac",R.drawable.home_img2,R.drawable.isaac));
-        mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img5,R.drawable.phiasau));
-        mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img4,R.drawable.isaac));
-        mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img5,R.drawable.phiasau));
-        mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img1,R.drawable.phiasau));
-        adt = new CustomSong(mSongs, (View.OnClickListener) this);
+        mSongs.add(new Song("Love yourseft","Justin Biber",R.drawable.home_img1,R.raw.phiasau));
+        mSongs.add(new Song("Anything","Issac",R.drawable.home_img2,R.raw.isaac));
+        mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img5,R.raw.phiasau));
+        mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img4,R.raw.isaac));
+        mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img5,R.raw.phiasau));
+        mSongs.add(new Song("Borderline","Temp lmpala",R.drawable.home_img1,R.raw.phiasau));
+        adt = new CustomSong(mSongs, (OnClickListener) this);
         rcv.setHasFixedSize(true);
         rcv.setAdapter(adt);
         rcv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false));
